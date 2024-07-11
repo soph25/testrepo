@@ -23,12 +23,12 @@ async function setupGoogleAuth() {
     throw new Error('GOOGLE_APPLICATION_CREDENTIALS non défini');
   }
 }
-
+const app = express();
 // Utilisez cette fonction avant d'initialiser le client Dialogflow
 setupGoogleAuth().then(authClient => {
   // Initialisez votre client Dialogflow ici
 
-const app = express();
+
 app.use(express.json());
 app.use(cors(corsOptions));
 
