@@ -59,7 +59,7 @@ app.post('/chatbot', async (req, res) => {
 });
   
 }).catch(error => {
-  console.error('Erreur d'authentification:', error);
+  console.error('Erreur authentification:', error);
 });
 
 
