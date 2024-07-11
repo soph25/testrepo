@@ -5,11 +5,16 @@ const uuid = require('uuid');
 const cors = require('cors');
 const app = express();
 
+const corsOptions = {
+  origin: 'https://mionisup.ouvaton.org', // Remplacez par l'URL de votre frontend
+  optionsSuccessStatus: 200
+};
+
 
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 const sessionClient = new dialogflow.SessionsClient();
 const projectId = process.env.DIALOGFLOW_PROJECT_ID;
