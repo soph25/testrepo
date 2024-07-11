@@ -19,7 +19,7 @@ app.use(cors(corsOptions));
 const sessionClient = new dialogflow.SessionsClient();
 const projectId = process.env.DIALOGFLOW_PROJECT_ID;
 
-app.post('/chatbot', async (req, res) => {
+app.post('/', async (req, res) => {
     const sessionId = uuid.v4();
     const sessionPath = sessionClient.projectAgentSessionPath(projectId, sessionId);
 
