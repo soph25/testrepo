@@ -6,10 +6,7 @@ const cors = require('cors');
 const { GoogleAuth } = require('google-auth-library');
 
 
-const corsOptions = {
-  origin: 'https://mionisup.ouvaton.org', // Remplacez par l'URL de votre frontend
-  optionsSuccessStatus: 200
-};
+
 
 // Fonction pour configurer l'authentification
 async function setupGoogleAuth() {
@@ -28,7 +25,10 @@ const app = express();
 setupGoogleAuth().then(authClient => {
   // Initialisez votre client Dialogflow ici
 
-
+const corsOptions = {
+  origin: 'https://mionisup.ouvaton.org', // Remplacez par l'URL de votre frontend
+  optionsSuccessStatus: 200
+};
 app.use(express.json());
 app.use(cors(corsOptions));
 
