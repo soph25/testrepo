@@ -2,9 +2,14 @@
 const express = require('express');
 const dialogflow = require('@google-cloud/dialogflow');
 const uuid = require('uuid');
+const cors = require('cors');
+const app = express();
+
+
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 const sessionClient = new dialogflow.SessionsClient();
 const projectId = process.env.DIALOGFLOW_PROJECT_ID;
