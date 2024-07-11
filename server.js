@@ -27,7 +27,7 @@ async function setupGoogleAuth() {
 // Utilisez cette fonction avant d'initialiser le client Dialogflow
 setupGoogleAuth().then(authClient => {
   // Initialisez votre client Dialogflow ici
-  // ...
+
 const app = express();
 app.use(express.json());
 app.use(cors(corsOptions));
