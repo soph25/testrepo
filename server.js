@@ -48,9 +48,10 @@ app.post('/chatbot', async (req, res) => {
             },
         },
     };
-
+console.log("Requête reçue:", req.body);
     try {
         const responses = await sessionClient.detectIntent(request);
+      console.log("response:", res);
         res.json({ reply: responses[0].queryResult.fulfillmentText });
     } catch (error) {
         console.error('ERROR:', error);
