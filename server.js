@@ -40,7 +40,7 @@ setupGoogleAuth().then(authClient => {
   // Initialisez votre client Dialogflow ici
   const sessionClient = new dialogflow.SessionsClient();
 
-  app.post('/chatbot', async (req, res) => {
+  app.post('/', async (req, res) => {
     const sessionId = uuid.v4();
     const sessionPath = sessionClient.projectAgentSessionPath(projectId, sessionId);
     const request = {
