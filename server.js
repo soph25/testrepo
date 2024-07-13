@@ -80,7 +80,7 @@ async function initializeDialogflowAndRoutes() {
     });
 
   } catch (error) {
-    console.error('Erreur lors de l'initialisation:', error);
+    console.error('Erreur lors initialisation:', error);
   }
 }
 
